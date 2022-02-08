@@ -81,6 +81,8 @@ def main():
   print("=======================================================================================================================")
   print("memory (in bytes):")
   print(psutil.virtual_memory().total)
+  cpu_usage = psutil.cpu_percent(4)
+  print('The CPU usage: ',  cpu_usage," %")
   
 if __name__ == "__main__":
   main()
