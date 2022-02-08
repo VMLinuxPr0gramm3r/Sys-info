@@ -85,4 +85,5 @@ def main():
   print('The CPU usage: ',  cpu_usage," %")
   
 if __name__ == "__main__":
-  main()
+  for i in range(1):
+      main()
