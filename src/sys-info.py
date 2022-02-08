@@ -12,15 +12,15 @@ from torip import ip_list
 def main():
   ldistro = distro.id()
   public_ip = get('https://api.ipify.org').text
-  os = platform.system()
+  operating_system = platform.system()
 
   print("Hostname: " + socket.gethostname())
   print("=======================================================================================================================")
-  print("operating_system: "+os)
-  if(os == "Windows"):
+  print("operating_system: "+operating_system)
+  if(operating_system == "Windows"):
       pass
-  elif(os == "Linux"):
-      print("=======================================================================================================================")
+  elif(operating_system == "Linux"):
+   #print("=======================================================================================================================")
       print("Linux distribution: "+ldistro)
       if(ldistro == "debian"):
           dupdate = input("do you want to update your system? [y/n]: ")
@@ -43,7 +43,7 @@ def main():
       else:
           pass
 
-  elif(os == "Mac OS X"):
+  elif(operating_system == "Mac OS X"):
       pass
   else:
       pass
@@ -63,7 +63,7 @@ def main():
   ifacelist = f.read().split('\n') 
   f.close()
   ifacelist.pop(0)
-  ifacelist.pop(0)
+  #ifacelist.pop(0)
   for line in ifacelist:
 
       ifacedata = line.replace(' ','').split(':')
