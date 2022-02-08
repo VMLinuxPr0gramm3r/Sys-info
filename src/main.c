@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+#include "gethostname.h"
+
 #define SYSTEM_INFORMATION
 
 void os_detector(){
@@ -43,11 +45,7 @@ int private_ip_list(){
 }
 
 int main(){
-    char hostname[1024];
-    hostname[1023] = '\0';
-    gethostname(hostname, 1023);
-    // print hostname
-    printf("hostname: %s\n", hostname);
+    printhostname();
 
     //print public ip and tor status
     system("python3 ./getip.py");
