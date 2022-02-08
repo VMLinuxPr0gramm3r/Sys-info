@@ -12,7 +12,7 @@ int main(){
     printhostname();
     //print public ip and tor status
     system("python3 ./getip.py");
-    private_ip_list();
+    private_ip_list("wlan0");
     getpublicip();
     os_detector();
     print_current_time();
