@@ -25,7 +25,7 @@ def main():
       if(ldistro == "debian"):
           dupdate = input("do you want to update your system? [y/n]: ")
           if(dupdate == "y"):
-              os.system("sudo apt update;sudo apt full-upgrade -y;sudo apt clean;sudo apt autoclean")
+              os.system("sudo apt update && sudo apt full-upgrade")
           else:
               pass 
       elif(ldistro == "fedora"):
